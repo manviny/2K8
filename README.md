@@ -4,7 +4,7 @@ Nombre servidor TM-DC1-2K8
 
 
 #1.- Establecer zona horaria
-
+![](https://s3-eu-west-1.amazonaws.com/mnybackups/2k8/Captura+de+pantalla+2015-01-29+a+las+9.00.45.png)
 #2.- Configurar funcoines de red 
 Debemos poner IP's estáticas  
 **IP**   
