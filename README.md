@@ -69,3 +69,9 @@ y entramos como MANOL\Administrador (manol.com)
 inicio > escribimos remoto y hacemos clic en escritorio remoto y en opciones:   
 En la pestaña general decimos que nos conectamos al equipo: TM-DC1-2K8.manol.com y usuario:Administrador  
 Guardar conexión en el escritorio para  tenerla siempre a mano  
+
+#12.- Crear unidad organizativa
+En Funciones > Servicios de dominio de Active Directory > Sitios y Servicios de Active Directory, boton derecho 
+nuevo: Unidad Organizativa (tameOU), debajo de esta crear dos OU:TmUsers y TmComputers  
+
+#13.- Crear usuarios
