@@ -8,12 +8,14 @@ Nombre servidor TM-DC1-2K8
 #2.- Configurar funcoines de red 
 Debemos poner IP's estáticas  
 **IP**   
-192.16.1.2  
+192.168.1.2  
 255.255.255.0   
 192.168.1.1  
 **DNS**  
 192.168.1.1  
 (si no usamos IPV6, desconectarlo)  
+
+![](https://s3-eu-west-1.amazonaws.com/mnybackups/2k8/Captura+de+pantalla+2015-01-29+a+las+8.59.50.png)
 
 #3.- Proporcionar nombre del equipo y dominio.
 Cambiar el nombre del servidor  
