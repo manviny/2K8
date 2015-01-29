@@ -23,7 +23,7 @@ Debemos poner IP's estáticas
 Cambiar el nombre del servidor  
 TM-DC1-2K8, (el dominio no podemos cambiarlo todavía)  
 restart  
-![](https://s3-eu-west-1.amazonaws.com/mnybackups/2k8/Captura+de+pantalla+2015-01-29+a+las+11.43.09.png)
+
 #4.- Habilitar comentarios y actulizacions automáticas.
 Actualizaciones automaticas, preguntar antes si quiero descargarlas e instalarlas e incluir actualizaciones recomendadas.   
 Preguntarme antes de enviar errores a microsoft.   
