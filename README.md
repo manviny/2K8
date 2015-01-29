@@ -4,9 +4,11 @@ Nombre servidor TM-DC1-2K8
 # Tareas de configuración inicial
 ![](https://s3-eu-west-1.amazonaws.com/mnybackups/2k8/16-17.JPG)
 
-#1.- Establecer zona horaria
+
+# 1.- Proporcionar información del equipo
+####Establecer zona horaria
 ![](https://s3-eu-west-1.amazonaws.com/mnybackups/2k8/Captura+de+pantalla+2015-01-29+a+las+9.00.45.png)
-#2.- Configurar funcoines de red 
+####Configurar funciones de red 
 Debemos poner IP's estáticas  
 **IP**   
 192.168.1.2  
@@ -15,10 +17,9 @@ Debemos poner IP's estáticas
 **DNS**  
 192.168.1.1  
 (si no usamos IPV6, desconectarlo)  
-
 ![](https://s3-eu-west-1.amazonaws.com/mnybackups/2k8/Captura+de+pantalla+2015-01-29+a+las+8.59.50.png)
 
-#3.- Proporcionar nombre del equipo y dominio.
+####Proporcionar nombre del equipo y dominio.
 Cambiar el nombre del servidor  
 TM-DC1-2K8, (el dominio no podemos cambiarlo todavía)  
 restart  
