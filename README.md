@@ -15,7 +15,7 @@ Debemos poner IP's estáticas
 255.255.255.0   
 192.168.1.1  
 **DNS**  
-192.168.1.1  
+192.168.1.2  # El mismo que nuestra IP estática, ya que disponemos de servidor de DNS's
 (si no usamos IPV6, desconectarlo)  
 ![](https://s3-eu-west-1.amazonaws.com/mnybackups/2k8/Captura+de+pantalla+2015-01-29+a+las+8.59.50.png)
 
