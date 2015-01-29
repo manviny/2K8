@@ -75,3 +75,4 @@ En Funciones > Servicios de dominio de Active Directory > Sitios y Servicios de 
 nuevo: Unidad Organizativa (tameOU), debajo de esta crear dos OU:TmUsers y TmComputers  
 
 #13.- Crear usuarios
+Ir a la OU adecuada boton derecho y crear usuario   
