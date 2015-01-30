@@ -81,7 +81,7 @@ Las **OU** sirven para organizar usuarios y ordenadores y de esta manera definir
 **Grupos** son objetos del directorio activo que **proveen o niegan acceso a recursos** como impresoras y carpetas de los diferentes departamentos, estos viven dentro de las OUs  
 
 
-1. En Funciones > Servicios de dominio de Active Directory > Sitios y Servicios de Active Directory, boton derecho 
+1. En Funciones > Servicios de dominio de Active Directory > Usuarios y equipos de Active Directory, boton derecho 
 nuevo:  
 Unidad Organizativa (tameOU), debajo de esta crear dos OU:TmUsers y TmComputers  
 
