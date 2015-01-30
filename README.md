@@ -79,10 +79,13 @@ En Funciones > Servicios de dominio de Active Directory > Sitios y Servicios de 
 nuevo: Unidad Organizativa (tameOU), debajo de esta crear dos OU:TmUsers y TmComputers  
 
 #13.- Crear usuarios
-Ir a la OU TmUsers boton derecho y crear 2 usuarios ( los usuarios podrán acceder mediante MANOL\manol (manol.com)
-En la OU TmComputers añadir nuestra máquina CLI-TM-W7, para ello lo arratraremos desde nuestro dominio > computers hasta TmComputers.  
-Las OU sirven para organizar usuarios y ordenadores y de esta manera definir lo que pueden y no pueden hacer.   
-Grupos son objetos del directorio activo que proveen o niegan acceso a recursos como impresoras y carpetas.  
+
+*Ir a la OU TmUsers boton derecho y crear 2 usuarios ( los usuarios podrán acceder mediante MANOL\manol (manol.com)
+  
+*En la OU TmComputers añadir nuestra máquina CLI-TM-W7, para ello lo arratraremos desde nuestro dominio > computers hasta TmComputers.  
+  
+Las **OU** sirven para organizar usuarios y ordenadores y de esta manera definir lo que pueden y no pueden hacer.   
+**Grupos** son objetos del directorio activo que proveen o niegan acceso a recursos como impresoras y carpetas.  
 
 
 
