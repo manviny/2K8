@@ -91,5 +91,9 @@ Unidad Organizativa (tameOU), debajo de esta crear dos OU:TmUsers y TmComputers
   
 *En la OU TmComputers añadir nuestra máquina CLI-TM-W7, para ello lo arratraremos desde nuestro dominio > computers hasta TmComputers.  
 
-En TmUsers crear 4 grupos, Manager 
+En TmUsers crear 4 grupos, ManagerVentas, UsuarioVentas, ManagerProduccion, UsuarioProduccion.  
+En TmComputers 2 grupos, ItComputers, StandardComputers  
+Añadir usuarios y ordenadores a grupos haciendo clic derecho y Agregar a un grupo, escribiendo el grupo donde moverlo.   
+Para comprobar si el grupo contiene a los miembros correctos, hacer clic y ver miembros en propiedades
+
 
