@@ -74,18 +74,21 @@ inicio > escribimos remoto y hacemos clic en escritorio remoto y en opciones:
 En la pestaña general decimos que nos conectamos al equipo: TM-DC1-2K8.manol.com y usuario:Administrador  
 Guardar conexión en el escritorio para  tenerla siempre a mano  
 
-#12.- Crear unidad organizativa
-En Funciones > Servicios de dominio de Active Directory > Sitios y Servicios de Active Directory, boton derecho 
-nuevo: Unidad Organizativa (tameOU), debajo de esta crear dos OU:TmUsers y TmComputers  
+#12.- Crear unidad organizativa  
+
+  
+Las **OU** sirven para organizar usuarios y ordenadores y de esta manera definir lo que pueden y no pueden hacer.   
+**Grupos** son objetos del directorio activo que proveen o niegan acceso a recursos como impresoras y carpetas.  
+
+
+1. En Funciones > Servicios de dominio de Active Directory > Sitios y Servicios de Active Directory, boton derecho 
+nuevo:  
+Unidad Organizativa (tameOU), debajo de esta crear dos OU:TmUsers y TmComputers  
 
 #13.- Crear usuarios
 
 *Ir a la OU TmUsers boton derecho y crear 2 usuarios ( los usuarios podrán acceder mediante MANOL\manol (manol.com)
   
 *En la OU TmComputers añadir nuestra máquina CLI-TM-W7, para ello lo arratraremos desde nuestro dominio > computers hasta TmComputers.  
-  
-Las **OU** sirven para organizar usuarios y ordenadores y de esta manera definir lo que pueden y no pueden hacer.   
-**Grupos** son objetos del directorio activo que proveen o niegan acceso a recursos como impresoras y carpetas.  
-
 
 
