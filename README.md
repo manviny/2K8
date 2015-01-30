@@ -54,7 +54,7 @@ nuestro dominio debe existir y en su interior entre otras veremos carpetas de co
 En Funciones > Servicios de dominio de Active Directory > Sitios y Servicios de Active Directory  
 Renombramos Default-First-Site-Name A TAME  
 
-#9.- Conectar por control remoto W7 -> 2K8  
+#9.- Preparar W7 para conectarnos al dominio.   
 En W7 inicio > equipo, boton derecho y cambiar nombre a CLI-TM-W7 y reiniciar  
 En W7 inicio > equipo, boton derecho y poner nombre del dominio, manol.com.  
 **PROBLEMAS:**    
