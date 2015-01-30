@@ -85,7 +85,7 @@ Las **OU** sirven para organizar usuarios y ordenadores y de esta manera definir
 nuevo:  
 Unidad Organizativa (tameOU), debajo de esta crear dos OU:TmUsers y TmComputers  
 
-#13.- Crear usuarios
+#13.- Crear y mover usuarios y ordenadores a sus UOs.
 
 *Ir a la OU TmUsers boton derecho y crear 2 usuarios ( los usuarios podrán acceder mediante MANOL\manol (manol.com)
   
