@@ -87,7 +87,7 @@ Unidad Organizativa (tameOU), debajo de esta crear dos OU:TmUsers y TmComputers
 
 #13.- Crear y mover usuarios y ordenadores a sus UOs.
 
-*Ir a la OU TmUsers boton derecho y crear 2 usuarios ( los usuarios podrán acceder mediante MANOL\manol (manol.com)
+*Ir a la OU TmUsers boton derecho y crear un usuaior por cada alumno de la clase, estos podrán entrar entrar en el dominio desde windows cliente, poniendo el nombre del dominio en mayuscula\nombreusuario, por ejemplo si el dominio fuera manol.com, entrariamos mediante MANOL\usuario.
   
 *En la OU TmComputers añadir nuestra máquina CLI-TM-W7, para ello lo arratraremos desde nuestro dominio > computers hasta TmComputers.  
 
