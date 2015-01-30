@@ -77,8 +77,8 @@ Guardar conexión en el escritorio para  tenerla siempre a mano
 #12.- Crear unidad organizativa  
 
   
-Las **OU** sirven para organizar usuarios y ordenadores y de esta manera definir lo que pueden y no pueden hacer.   
-**Grupos** son objetos del directorio activo que proveen o niegan acceso a recursos como impresoras y carpetas.  
+Las **OU** sirven para organizar usuarios y ordenadores y de esta manera definir lo que pueden y no pueden hacer con sus usuarios, cambiar fondo escritorio, ocultar barra tareas, etc.   
+**Grupos** son objetos del directorio activo que proveen o niegan acceso a recursos como impresoras y carpetas, estos viven dentro de las OUs  
 
 
 1. En Funciones > Servicios de dominio de Active Directory > Sitios y Servicios de Active Directory, boton derecho 
