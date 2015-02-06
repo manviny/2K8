@@ -1,4 +1,5 @@
 ![](http://indinet.es/moodle/pluginfile.php/32/course/section/28/2K8.png)
+
 [Crear un dominio en server 2008 y acceso remoto](https://www.youtube.com/watch?v=F9pvhKNRGLA)
 [Active Directory - Qué es y para que sirve](https://www.youtube.com/watch?v=nxo98Dyw-2U)
 [https://www.youtube.com/watch?v=CT9iqnBmufI](Como crear usuarios y grupos - Windows Server 2008)
