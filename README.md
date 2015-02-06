@@ -3,7 +3,7 @@
 
 [Crear un dominio en server 2008 y acceso remoto](https://www.youtube.com/watch?v=F9pvhKNRGLA)   
 [Active Directory - Qué es y para que sirve](https://www.youtube.com/watch?v=nxo98Dyw-2U)   
-[https://www.youtube.com/watch?v=CT9iqnBmufI](Como crear usuarios y grupos - Windows Server 2008)   
+[Como crear usuarios y grupos - Windows Server 2008](https://www.youtube.com/watch?v=CT9iqnBmufI])   
 
 
 
