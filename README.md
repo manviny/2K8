@@ -1,5 +1,5 @@
 
-![server](http://indinet.es/moodle/pluginfile.php/32/course/section/28/2K8.png)    
+![server](https://s3-eu-west-1.amazonaws.com/mny-fotos/webs/2K8.png)    
 
 [Crear un dominio en server 2008 y acceso remoto](https://www.youtube.com/watch?v=F9pvhKNRGLA)   
 [Active Directory - Qué es y para que sirve](https://www.youtube.com/watch?v=nxo98Dyw-2U)   
