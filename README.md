@@ -644,3 +644,124 @@ Todos. Podemos otorgar permisos de acceso a usuarios locales, desde la pestaña
 Seguridad, o a usuarios del dominio. 
 
 ## Actividades 5
+###1. ¿Se pueden asignar perfiles móviles a todos los usuarios del dominio?
+Solución:
+Sí. No existe ninguna restricción para este tipo de acciones. Si no asignamos perfiles
+móviles, localmente en cada equipo en el que el usuario inicie sesión se creará un perfil
+local.
+###2. ¿Se pueden asignar perfiles móviles a usuarios locales de un cliente Windows
+integrado en un dominio?
+Solución:
+No. Los perfiles móviles solamente se pueden asignar a usuarios de Directorio Activo, es
+decir, a usuarios globales del dominio. Los usuarios locales solamente pueden gestionar
+y utilizar perfiles locales de la máquina en la que están dados de alta.
+###3. ¿Dónde se guardan los perfiles móviles de usuario, en el equipo cliente o en el
+servidor?
+Solución:
+En el Servidor. Localmente se almacena una copia del perfil del dominio, pero la
+configuración real de los elementos que ha personalizado el usuario se almacenará
+siempre en la carpeta que en el controlador de dominio hayamos designado para este
+fin.
+###4. ¿Qué indica la variable de entorno %username%?
+Solución:
+El nombre de usuario que se ha validado al controlador de dominio, o usuario que ha
+iniciado sesión localmente en un equipo. %username% se sustituye por el login del
+usuario que ha iniciado sesión localmente o en el dominio.
+###5. ¿Qué tipo de memoria es la que conviene optimizar en un sistema con Windows
+Server?
+Solución:
+La memoria de intercambio, para que el sistema pueda ir algo más ligero y se produzcan
+menos accesos a disco para realizar la paginación de archivos abiertos.
+###6. ¿Se puede modificar la ubicación del archivo de paginación en Windows Server?
+Solución:
+Sí. No es muy recomendable, pero podemos elegir otra unidad de disco o partición de
+nuestro sistema para realizar el intercambio de archivos. Lo ideal es disponer de un
+segundo disco duro, que sea rápido y en el que se realice exclusivamente la
+paginación, y que no se utilice para almacenar archivos de datos de usuario o del
+propio SO.
+###7. ¿En qué disco es conveniente ubicar el archivo de paginación de Windows
+Server?
+Solución:
+Como acabamos de indicar, lo correcto es dejar el archivo de paginación en el disco
+duro principal o, en todo caso, en un segundo disco duro independiente, siempre y
+cuando este sea al menos igual de rápido que el principal y tenga espacio suficiente
+para realizar el intercambio.
+###8. ¿Qué usuarios pueden administrar la gestión de cuotas de disco?
+Solución:
+El administrador del sistema y todos aquellos usuarios globales del dominio que tengan
+privilegios de súper usuarios del sistema.
+###9. ¿Cuánto espacio de disco puede utilizar cualquier usuario del dominio sobre un
+recurso compartido que está en el controlador de dominio?
+Solución:
+A priori, todo el espacio disponible del disco, a menos que asignemos cuotas de disco
+a dicho usuario sobre este recurso compartido.
+###10. ¿De qué forma podemos saber cuándo un usuario ha excedido la cuota de disco
+que tiene asignada?
+Solución:
+Mediante los avisos que se generan en el visor de sucesos del sistema. Gracias a esta
+herramienta, y si hemos configurado las cuotas de disco con un tamaño mínimo,
+estableciendo los Limites de advertencia adecuadamente.
+###11. Si un usuario tiene acceso a dos carpetas del controlador de dominio y tiene una
+cuota de disco de 1 MB, ¿cuánta información podrá almacenar en cada carpeta?
+Solución:
+En total, en todos sus recursos, el usuario no podrá utilizar un espacio superior a 1 MB,
+aunque tuviera acceso a varias carpetas compartidas en las que pudiera grabar
+información. Las cuotas de disco se asignan por usuario, pero no se asignan por
+recurso.
+###12. ¿De qué formas podemos ejecutar el administrador de tareas en Windows Server?
+Solución:
+De forma similar a como se hace en las versiones de sobremesa de Windows, pulsando
+las teclas, Ctrl+Alt+Supr, o desde la barra de tareas, pulsando con el botón derecho del
+ratón en Administrador de Tareas.
+###13. ¿Cómo se puede detener un proceso en Windows Server?
+Solución:
+Desde el Administrador de Tareas, en la pestaña Procesos, seleccionando el proceso y
+pulsando con el botón derecho del ratón en Terminar proceso o Terminar el árbol de
+procesos (esta segunda opción, solamente para procesos multihebra o multihilo).
+###14. ¿Se pueden detener todos los servicios que están en ejecución en Windows
+Server?
+Solución:
+No. Hay servicios que si los detenemos el sistema no arrancaría. Por eso el propio
+sistema impide que paremos algunos de los servicios considerados como “esenciales”
+para el funcionamiento del equipo.
+###15. Si un servicio no se puede detener, ¿a qué puede ser debido?
+Solución:
+A que es un servicio que tiene dependencias, y por lo tanto su parada implica la
+detención de otros servicios que dependen de él, o también porque la aplicación de la
+que depende este servicio está en ejecución y hasta que no la finalicemos no podremos
+detener el servicio.
+###16. ¿En qué ubicaciones se pueden hacer copias de seguridad completas de Windows
+Server?
+Solución:  
+En cualquier lugar que no incluya los archivos de los que queremos realizar la copia de
+seguridad. Se pueden hacer copias de seguridad en otros discos duros locales, discos
+en red, dispositivos de almacenamiento externo, como USB, e incluso en DVD-RW.
+###17. ¿Para qué se etiqueta un disco de copia de seguridad en Windows Server?
+Solución:
+Para poder identificarlo posteriormente y tener claro que tipo de copia se hizo en este
+disco, cuando, y con que configuración. Es simplemente una identificación de la copia de
+seguridad.
+###18. ¿Podemos restaurar una copia de seguridad completa en otro equipo distinto pero
+de idénticas carecterísticas a aquel en el que se realizó una copia de seguridad
+completa de Windows Server?
+Solución:
+Sí. Seguramente tengamos algún problema de hardware, pero técnicamente esta
+operación es posible y tiene que funcionar correctamente, ya que el equipo en el que se
+restaura la copia de seguridad es idéntico al equipo original.
+###19. ¿Es conveniente programar tareas en un equipo que utilizamos muy de vez en
+cuando?
+Solución:
+No. Normalmente las tareas se programan para evitar tener que estar pendiente de
+realizar operaciones repetitivas habituales. Si queremos, por ejemplo, chequear el disco
+una vez al año, el programar una tarea para ello tal vez esté de más, aunque pueda ser
+la única forma de acordarnos de hacerlo, pero en general no se recomienda programar
+tareas poco habituales.
+###20. ¿Se pueden asociar las tareas programadas a eventos del sistema?
+Solución:
+Sí. En Windows 2003 o 2008 Server se puede realizar esta asociación, teniendo en
+cuenta que las opciones que ofrece 2008 Server, en cuanto a eventos a los que asociar
+tareas programadas, es mucho mayor que las que ofrece 2003 Server.
+###21. ¿Podemos hacer que una tarea programada apague el sistema?
+Solución:
+Sí. Siempre y cuando conozcamos el comando que se utiliza para apagar el sistema,
+que en este caso es el comando Shutdown con los parámetros requeridos.  
