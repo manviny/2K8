@@ -112,6 +112,7 @@ Para comprobar si el grupo contiene a los miembros correctos, hacer clic y ver m
 
 
 #SOLUCIONES
+## Actividades 1
 ###1. ¿Todas las versiones de Windows pueden trabajar en varias plataformas hardware?   
 Solución:   
 Solamente las versiones de Windows de la familia NT. En particular desde la versión NT
@@ -247,7 +248,7 @@ automáticamente este servicio.
 
     
        
-       
+## Actividades 2       
 ###1. Indica al menos dos desventajas de la utilización de equipos en una red con o sin
 servidor.
 Solución:  
@@ -349,3 +350,297 @@ algunos servicios, pero en realidad todo el proceso de añadir o quitar componen
 se realiza al terminar la instalación del SO. Es importante realizar una instalación limpia, y
 posteriormente agregar roles y características según las necesidades de la infraestructura
 que deseemos montar.
+
+## Actividades 3
+###1. ¿Con que herramienta crearemos usuarios en un equipo Windows Server que ha sido
+promovido a controlador de dominio?
+Solución:
+Cuando un equipo Windows Server que no ha sido promovido a controlador de dominio,
+sus grupos y usuarios se administran desde Administración de equipos > Usuarios y grupos
+locales. Cuando se promueve a controlador de dominio, los grupos se tienen que dar de
+alta con la herramienta administrativa Usuarios y equipos de Active Directory. Esta
+herramienta la encontramos dentro del conjunto de Herramientas Administrativas del
+equipo.
+###2. ¿En que equipo de la red podrán iniciar sesión estos usuarios?
+Solución:
+En cualquier equipo cliente o servidor, que previamente haya sido unido al dominio, tal y
+como veremos en la siguiente unidad.
+###. Cuándo tenemos promovido un equipo Windows Server a controlador de dominio,
+¿podemos crear usuarios locales para iniciar sesión en el equipo?
+Solución:
+No. Aunque podamos iniciar sesión localmente en el equipo que tiene instalado Directorio
+Activo, los usuarios y grupos que se gestionan a partir de este momento, son usuarios y
+grupos globales del dominio. Por lo tanto, la administración de grupos y usuarios locales
+desde la herramienta Administración de equipos no estará activa.
+###4. ¿Desde donde podremos crear grupos en el Directorio Activo?
+Solución:
+Los grupos se tienen que dar de alta, cuando tenemos instalado DA, con la herramienta
+administrativa Usuarios y equipos de Active Directory. Esta herramienta la encontramos
+dentro del conjunto de Herramientas Administrativas del equipo.
+###5. ¿Es necesario crear los grupos en la unidad organizativa en la que vienen creados
+los grupos integrados en el sistema?
+Solución:
+No. En general, los diferentes objetos que maneja el Directorio Activo, se pueden agrupar
+en nuevas unidades organizativas creadas por nosotros, sin que esto afecte al
+funcionamiento de los objetos creados.
+###6. ¿Cuántos grupos podemos crear en un equipo con Directorio Activo?
+Solución:
+Los que queramos. La limitación seguro que existe, pero ni el propio fabricante del sistema
+operativo indica que haya límite alguno a la creación de objetos en un dominio con
+Directorio Activo.
+###7. Si eliminamos un grupo de usuarios, ¿eliminamos los usuarios que pertenecen al
+mismo?
+Solución:
+No. Los usuarios seguirán existiendo. Lo que ocurre es que los privilegios que pudieran
+haber heredado del grupo que hemos borrado, desaparecerán.
+###8. ¿Podemos añadir grupos a otros grupos de usuarios?
+Solución:
+Sí. Para ello tendremos en cuenta el ámbito de los grupos:
+a) Grupos de ámbito global. Los permisos concedidos a este grupo tienen validez en
+cualquier dominio. Sus miembros solo pueden actuar en el dominio donde está dado de
+alta el grupo global. Pueden ser miembros de grupos universales o locales de dominio
+en cualquier dominio y pueden tener como miembros a otros grupos globales y cuentas
+de usuario del mismo dominio.  
+b) Grupos de ámbito local de dominio. Es lo contrario de un grupo local ya que sus
+miembros actúan sobre cualquier dominio, pero sus permisos sólo son efectivos para
+recursos del dominio en el que se crea el grupo. Pueden tener como miembros a otros
+grupos locales de dominio en el mismo dominio, grupos globales de cualquier dominio,
+grupos universales de cualquier dominio y usuarios de cualquier dominio.  
+c) Grupos de ámbito universal. Estos grupos, pueden tener miembros procedentes de
+cualquier dominio y se les puede asignar permisos para recursos de cualquier dominio.
+Solo se pueden gestionar en servidores en modo nativo (servidores y equipos del mismo
+tipo de sistema operativo 2000 o 2003). Pueden tener como miembros a otros grupos
+universales, grupos globales de cualquier dominio y cuentas individuales de usuarios de
+cualquier dominio.
+###9. ¿Podemos tener creados dos grupos con el mismo nombre en dos unidades
+organizativas diferentes?
+Solución:
+No. Cuando creamos un objeto, indicamos el tipo de objeto que es. En este caso, si
+creamos un objeto grupo de usuarios en una UO, no podremos crear otro objeto grupo de
+usuarios con el mismo nombre aunque esté contenido en otra UO diferente.
+###10. ¿Es obligatorio asignar contraseña cuando se crea un usuario de Directorio Activo?
+Solución:
+No. Con lo que sabemos hacer nosotros, sí que tendremos que asignar obligatoriamente
+una contraseña, pero se pueden diseñar políticas de cuentas específicas, que permitan que
+un usuario se pueda validar al dominio sin introducir ninguna contraseña. Esta operación se
+considera administración avanzada, y por ello nosotros no la veremos en este curso.
+###11. ¿Para que sirve el nombre NetBios de un usuario de Directorio Activo?
+Solución:
+Sobre todo y principalmente, para realizar validaciones desde clientes que no utilicen
+nombres DNS, como pueden ser clientes Windows 98 o algunos clientes Linux, aunque la
+utilidad de este nombre es mayor, sobre todo, cuando trabajemos con herramientas de
+administración avanzada de dominios Windows Server.
+###12. ¿Qué ocurre si modificamos el login de un usuario de Directorio Activo?
+Solución:
+Si se pudiera, que no se puede, estaríamos eliminando el usuario y dando de alta otro
+nuevo, ya que el login de usuario en el sistema ha de ser único y no se puede modificar.
+###13. ¿Se pueden crear dos usuarios con el mismo nombre pero con distinto login?
+Solución:
+Sí. El nombre completo del usuario es un dato, como puede ser la dirección, teléfono, etc,
+que evidentemente puede ser el mismo para varios usuarios. Lo único que debe ser
+diferente es el login de usuario. El resto de datos, incluyendo la contraseña, se pueden
+repetir.
+###14. Si una cuenta de usuario está deshabilitada, ¿este podrá iniciar sesión en el
+sistema?
+Solución:
+No. Hasta que el administrador o un usuario con privilegios active la cuenta, a pesar de
+existir en el dominio, el usuario que tenga la cuenta deshabilitada no podrá iniciar sesión en
+el equipo.
+###15. ¿Es obligatorio configurar el servicio DNS para que los usuarios se puedan validar
+en el dominio?
+Solución:
+Sí. Pero, más que para los usuarios, es necesario para que el controlador de dominio sea
+capaz de reconocer los clientes o máquinas desde las que los usuarios se validan al
+dominio. Si no se asocia el nombre de máquina a una IP y el servidor no reconoce esta
+asociación, aunque tengamos usuarios dados de alta correctamente en el sistema, estos no
+se podrán validar ya que no se reconocerán los equipos desde los que se quieren conectar
+###16. ¿Es necesario configurar el servicio DNS para establecer conectividad entre
+dominios sin relaciones de confianza?
+Solución:
+Obligatoriamente. Si no se configuran los servicios DNS, no se podrán establecer
+relaciones de confianza entre dominios, ya que no se podrán poner en contacto los equipos
+principales en los que se ha instalado el Directorio Activo.
+###17. ¿Quiénes pueden establecer relaciones de confianza entre dominios?
+Solución:
+Los administradores de cada dominio, o algún usuario al que se le hayan concedido
+permisos o privilegios para administrar el sistema.
+###18. Si montamos una relación de confianza bidireccional del dominio1 con el dominio2 y
+del dominio2 con el dominio3, ¿qué implicaciones tendrá este proceso?
+Solución:
+Si las relaciones de confianza son de confianza total, técnicamente el dominio1 y el
+dominio3 tendrán establecidas indirectamente relaciones de confianza a través del
+dominio2
+###19. ¿Cuántas plantillas de usuario se pueden crear en Directorio Activo?
+Solución:
+Tantas como queramos. Las plantillas de usuario en realidad son usuarios que no se
+validarán al sistema, pero contienen las mismas propiedades que cualquier usuario del
+equipo. Teniendo en cuenta esto, podemos dar de alta las plantillas que queramos, con el
+mismo límite que el sistema nos podría imponer a la hora de crear usuarios normales.
+###20. ¿Si eliminamos la plantilla de usuario con la que hemos creado otros usuarios,
+¿estos se eliminarán también?
+Solución:   
+No. Como acabamos de decir, las plantillas de usuario son realmente usuarios, que no
+tienen nada que ver unos con otros, a pesar que nosotros los utilicemos para crear nuevos
+usuarios.
+###21. ¿Se puede utilizar el nombre paco\user como nombre de usuario de Directorio
+Activo?
+Solución:   
+No. El nombre de usuario o login no puede incluir caracteres especiales como / \ + * , etc.
+Tampoco puede incluir espacios en blanco.
+###22. ¿Quiénes pueden establecer delegaciones de uso y administración de dominios?
+Solución:   
+Solamente el administrador del dominio, o algún usuario con privilegios de administración
+del mismo.
+###23. Una vez realizada la delegación de control, ¿se podrá administrar un dominio desde
+un cliente?
+Solución:  
+Sí. Aunque no se puedan realizar todas las operaciones de administración, sí que se
+podrán hacer algunas cosas. No se podrán administrar usuarios, grupos, etc, puesto que lo
+que hemos visto en esta unidad no es suficiente para ello. Realmente nos harían falta
+algunas herramientas extra para poder administrar completamente el equipo servidor.
+
+## Actividades 4  
+###1. Una vez que tenemos integrado un equipo en un dominio, ¿podemos configurarlo
+para que forme solamente parte de un grupo de trabajo?
+Solución:
+Sí. En este caso sacaremos el equipo cliente del dominio y lo dejaremos como un equipo
+independiente de la red perteneciendo al grupo de trabajo que queramos.
+###2. ¿Qué hay que tener en cuenta antes de integrar un cliente en un dominio?
+Solución:
+De cada cliente tendremos que comprobar lo siguiente:  
+ El equipo tiene un nombre de equipo único en la red.  
+ Tiene una dirección IP dentro del mismo rango de direcciones IP que el servidor.  
+ La máscara de red tiene que ser la misma que la del servidor u otra que permita verle en
+la red.  
+ El grupo de trabajo al que pertenece el equipo, no es importante en este punto.  
+ Comprobar y verificar que el cliente tiene conectividad con otros equipos de la red. Esto
+lo podemos comprobar ejecutando una consola desde Inicio > Ejecutar e introduciendo
+cmd. Pulsamos Aceptar, y en la ventana de la consola introducimos un comando que
+comprobará si el equipo tiene conexión o no con otros de la red, y en particular con el
+servidor: ping 192.168.1.1 siendo 192.168.1.1 la dirección IP del servidor o controlador
+de dominio. En nuestro caso, introduciremos la IP que tenga el controlador de dominio.  
+ Introducir como DNS principal del equipo cliente, la dirección IP del servidor. La DNS
+secundaria, podemos poner cualquier cosa, normalmente la que utilizamos para el
+acceso a Internet.  
+ Asegurarnos que el usuario administrador del equipo cliente tiene contraseña,
+preferiblemente la misma que el administrador del controlador de dominio.  
+ Aunque no es estrictamente necesario, sí que es conveniente tener las cuentas de
+usuario globales creadas en el controlador de dominio, para realizar la integración del
+cliente de forma correcta.  
+ Tener iniciada sesión en el dominio y en el cliente como administrador.  
+###3. ¿De qué formas se pueden unir clientes Windows a un dominio con Windows
+Server?
+Solución:
+Desde los clientes, sean del tipo que sean, tendremos que ir a la pantalla de Propiedades
+del equipo o Sistema y pulsar en la pestaña Nombre de equipo.
+En Windows XP seleccionaremos Propiedades de Mi PC. En Windows Vista/7/8 iremos a
+Propiedades de Equipo > Cambiar la configuración. Y pulsaremos en la pestaña Nombre de
+equipo. En cualquiera de los dos casos, pulsaremos el botón Cambiar. Aparecerá una
+pantalla en la que introduciremos el nombre del dominio al que queremos unir este equipo,
+habiendo seleccionado previamente el botón de radio del cuadro Miembro de > Dominio.Otra forma, es pulsando Id de red cuando estemos en la pestaña Nombre de equipo del
+cuadro de diálogo Propiedades del sistema. De esta forma veremos qué pasos son los
+necesarios para realizar el proceso, matizando lo que en realidad pasa.
+###4. ¿Es necesario que el cliente a integrar en un dominio cuente con una dirección IP
+válida?
+Solución:
+Sí. Esta dirección puede ser estática o estar asignada por un servidor DHCP de la red, pero
+en cualquier caso el cliente deberá tener una IP en el mismo rango que el servidor del
+dominio al que lo queremos unir.
+###5. ¿Podemos integrar un equipo en dos dominios diferentes?
+Solución:
+No simultáneamente. Solamente podemos tenerlo integrado en un dominio. Otra cosa es
+que, posteriormente, establezcamos relaciones de confianza de este dominio con otro, en
+cuyo caso el cliente podrá iniciar sesión en ambos dominios, pero realmente pertenecerá a
+uno de ellos solamente. También podemos hacer que un cliente pertenezca primero a un
+dominio y luego a otro, pero a ambos a la vez no.
+###6. ¿Se pude iniciar sesión en modo local si el equipo cliente está unido a un dominio?
+Solución:
+Sí. Para ello nos validaremos con un usuario local del equipo, indicando en la pantalla de
+entrada Conectar a… el equipo local si es XP, y tecleando el nombre del equipo local o
+nombre de usuario para loguearse en el equipo.
+###7. El inicio de sesión yaiza@midominio.es, ¿Es un nombre de inicio de sesión válido?
+¿En qué tipo de cliente Windows?
+Solución:
+Sí. Es un nombre correcto de inicio de sesión, para dominios Windows Server a partir de la
+versión 2000, ya que el nombre de inicio de sesión es un nombre DNS. En concreto este
+nombre indica:  
+ Yaiza. Nombre de ususario del dominio.  
+ @. Validación DNS.  
+ midominio.es: nombre DNS del dominio.  
+Este login de usuario no puede utilizarse en clientes Linux antiguos ni en Windows 9X/Me.
+###8. Si hemos iniciado sesión en un dominio, ¿podemos iniciar una segunda sesión con
+otro usuario en modo local?
+Solución:
+Sí. En el equipo cliente, se pueden iniciar de forma simultánea al menos hasta 10 sesiones
+de trabajo, locales o en dominio.
+###9. ¿Y con otro usuario del dominio?
+Solución:
+Sí. Ocurre igual que en la actividad anterior.
+###10. ¿Se puede iniciar sesión en un dominio con un usuario local del equipo?
+Solución:  
+No. Los usuarios locales permiten la validación en el equipo local, y los usuarios del
+dominio permiten la validación en el controlador de dominio, pero en ningún caso a la
+inversa.
+###11. Cuando compartimos un recurso de un controlador de dominio, ¿estamos asignando
+permisos sobre el mismo?
+Solución:
+Sí. Por defecto se generan unos permisos de seguridad al recurso compartido, permitiendo
+solamente el acceso de lectura a todos los usuarios del dominio.
+###12. ¿Es cierto que los permisos sobre un recurso solamente se pueden aplicar cuando
+está compartido?
+Solución:
+No. Los permisos de seguridad sobre un recurso del controlador de dominio, se pueden
+asignar tanto si el recurso está compartido como si no lo está.
+###13. ¿Qué implica que un usuario tenga concedido el permiso de Control total sobre un
+recurso del controlador de dominio?
+Solución:
+Implica que puede leer, escribir, crear carpetas, borrar carpetas y archivos, etc, en
+definitiva, puede hacer lo que quiera sobre el mismo.
+###14. Si un usuario tiene concedido el permiso de lectura sobre una carpeta compartida en
+el dominio, ¿puede crear nuevas carpetas dentro del mismo?
+Solución:
+No. Sería necesario que se le hubiera concedido el permiso de escritura o de control total
+para poder crear nuevas carpetas o archivos dentro del recurso compartido.
+Con el permiso de lectura, como su nombre indica, solamente puede leer o explorar los
+archivos o carpetas del recurso.  
+###15. ¿Qué grupo por defecto tiene concedidos permisos sobre cualquier recurso del
+dominio?
+Solución:
+Usuarios o users.
+###16. ¿Puede un usuario local de un equipo cliente, administrar una impresora del
+dominio?
+Solución:
+Sí. Siempre y cuando el administrador del dominio le haya concedido permisos de
+seguridad que permitan esta acción.
+###17. ¿Qué particularidad tienen los recursos compartidos cuyo nombre termine en $?
+Solución:
+No se muestran en el entorno de red de ningún equipo de la red. Son recursos
+compartidos, pero ocultos.
+Solamente podremos acceder a ellos desde Inicio > Ejecutar, indicando algo similar a esto:
+\\nombre_servidor\\nombre_recurso_compartido$.  
+###18. ¿Qué recursos se dan a compartir inmediatamente después de la instalación y
+promoción a controlador de dominio de un equipo con Windows Server?
+Solución:
+Suelen ser estos:
+ ADMIN$. Recurso que utiliza el sistema durante la administración remota del equipo.  
+ IPC$. Recurso en dónde se comparte con canalizaciones especiales para la  
+comunicación entre procesos y programas, de tal forma que permite al equipo cliente
+enviar diferentes comandos al servidor como, por ejemplo, la acción de mostrar recursos
+compartidos.  
+ NETLOGON. Se usa para el inicio de sesión.  
+ PRINT$. Recurso utilizado para la administración remota de carpetas.  
+ FAX$. Igual que el anterior, pero para fax.  
+ Unidad_logica_$. Para poder acceder en modo remoto al recurso en cuestión, que al
+tener el dólar no será visible para ningún equipo de la red. Solamente lo podrá utilizar
+quien sepa cómo se llama. Si por ejemplo compartimos la unidad de CD-ROM como D$
+en vez de cómo D, el acceso remoto será prácticamente igual, a diferencia de que el
+recurso no se verá desde el entorno de red.  
+ SYSVOL. Contiene el catálogo global de las bases de datos de los controladores de
+dominio del Active Directory.  
+###19. Cuando compartimos un recurso de un cliente, ¿qué usuarios podrán acceder a el:
+locales o usuarios del dominio?
+Solución:
+Todos. Podemos otorgar permisos de acceso a usuarios locales, desde la pestaña
+Seguridad, o a usuarios del dominio. 
+
+## Actividades 5
